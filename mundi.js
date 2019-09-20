@@ -261,12 +261,19 @@ window.onload = function() {
     //show footer
     const tlFooter = new TimelineLite();
     tlFooter
-        .to('.footer', 0.5, {height: '60vh', ease: Sine.easeIn})
+        .to('.footer', 0.5, {height: '60vh', ease: Sine.easeIn, onComplete: desceFooter})
 
         tlFooter.pause();
 
     function playFooter() {
         tlFooter.play();
+    }
+
+    function desceFooter() {  
+        let $el = $('.footer');   
+        let bottom = $el.position().top + $el.offset().top + $el.outerHeight(true);
+
+        TweenLite.to($(window), 0.8, {delay: 0.2, scrollTo: {y:bottom, autoKill:false}, ease: Power3.easeInOut});
     }
 
 };
