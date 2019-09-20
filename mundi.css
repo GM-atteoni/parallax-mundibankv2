@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+.container-linguica{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+ 
+.border-top{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+}
+
+.border-top p{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    opacity: 1;
+    left: 86px;
+}
+
+.border-bottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+}
+
+.border-left{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 40px; 
+    height: 100%;
+    background-color: #fff;
+}
+
+.border-right{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    background-color: #fff;
+}
+
+.first-step{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.first-home-container{
+    background-color: #FF334F;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+#loader .dot{
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 100%;
+    margin-right: 6px;
+    border: 1px white solid;
+    opacity: 0;
+}
+
+.textLeftSection{
+    position: relative;
+    width: 500px;
+    height: 320px;
+    top: 170px;
+    left: 90px;
+    bottom: 342px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 65px;
+}
+
+.textLeftSection p{
+    position: relative;
+    font-family: 'Roboto';
+    color: white;
+    font-weight: 100;
+    font-size: 40px;
+    text-align: left;
+}
+
+#svgOla{
+    position: absolute;
+    right: -15%;
+    opacity: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.first-home-container p{
+    position: relative;
+    margin-right: 35%;
+    opacity: 0;
+    font-family: 'Roboto';
+    font-weight: 100;
+    color: white;
+    font-size: 50px;
+    width: 563px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.home-scroll{
+    transform: scale(-1, -1) rotate(270deg);
+    position: absolute;
+    opacity: 0;
+    position: absolute;
+    right: -75px;
+    height: 33px; 
+    top: 38em;
+}
+
+.arrow-down{
+    transform: rotate(270deg);
+}
+
+.second-step{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.second-container{
+    background-color: greenyellow;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url(assets/bgUser.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.third-step{
+    height: 110vh;
+    width: 100%;
+}
+
+.third-container{
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+.third-middle-top{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.third-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 17em;
+    margin-left: 5em;
+    width: 16em;
+    margin-top: 10em;
+}
+
+.third-text-1{
+    position: relative;
+    font-size: 45px;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+.third-text-2{
+    position: relative;
+    font-size: 21px;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+.third-text-3{
+    position: relative;
+    background-color:#FF334F;
+	border-radius:28px;
+	border:1px solid #FF334F;
+	display:inline-block;
+	cursor:pointer;
+	color:#FFFFFF;
+	font-family: 'Roboto';
+	font-size:17px;
+	padding:16px 31px;
+    text-decoration:none;
+    text-align: center;
+    width: 160px;
+    align-self: center;
+    transition: 0.2s ease-in-out all;
+}
+
+.third-text a:hover{
+    background-color: #fff;
+    border: 1px solid #ff3360;
+    color: #ff3360;
+}
+
+.columns{
+    flex-basis: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 2em;
+}
+
+.column1{
+    position: relative;
+    width: 75px;
+    transform: rotate(360deg);
+    height: 90px;
+    margin-top: 180px;
+    background: transparent linear-gradient(180deg, #B26591 0%, #FB3552 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.column2{
+    position: relative;
+    width: 75px;
+    transform: rotate(360deg);
+    height: 130px;
+    margin-top: 160px;
+    background: transparent linear-gradient(180deg, #B26591 0%, #FB3552 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.column3{
+    position: relative;
+    width: 75px;
+    transform: rotate(360deg);
+    height: 230px;
+    margin-top: 65px;
+    background: transparent linear-gradient(180deg, #B26591 0%, #FB3552 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.column4{
+    position: relative;
+    width: 75px;
+    transform: rotate(360deg);
+    height: 300px;
+    margin-top: 15px;
+    background: transparent linear-gradient(180deg, #B26591 0%, #FB3552 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.column5{
+    position: relative;
+    width: 75px;
+    transform: rotate(360deg);
+    height: 240px;
+    margin-top: 80px;
+    background: transparent linear-gradient(180deg, #B26591 0%, #FB3552 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.column6{
+    position: relative;
+    width: 75px;
+    transform: rotate(360deg);
+    height: 275px;
+    margin-top: 55px;
+    background: transparent linear-gradient(180deg, #B26591 0%, #FB3552 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.column7{
+    position: relative;
+    width: 75px;
+    transform: rotate(360deg);
+    height: 85px;
+    margin-top: 265px;
+    background: transparent linear-gradient(180deg, #B26591 0%, #FB3552 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.app-phones{
+    position: absolute;
+    height: 700px;
+    right: 115px;
+    top: 115px;
+}
+
+.fourth-step{
+    height: 110vh;
+    width: 100%;
+    position: relative;
+}
+
+.fourth-container{
+    position: relative;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.fourth-text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    top: 90px;
+    height: 17em;
+    margin-left: 15em;
+    width: 16em;
+    text-align: center;
+}
+
+.fourth-text h2{
+    font-size: 45px;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+.fourth-text h4{
+    font-size: 21px;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+.fourth-text a{
+    background-color:#FF334F;
+	border-radius:28px;
+	border:1px solid #FF334F;
+	display:inline-block;
+	cursor:pointer;
+	color:#FFFFFF;
+	font-family: 'Roboto';
+	font-size:17px;
+	padding:16px 31px;
+    text-decoration:none;
+    text-align: center;
+    width: 160px;
+    align-self: center;
+    transition: 0.2s ease-in-out all;
+}
+
+.fourth-text a:hover{
+    background-color: #fff;
+    border: 1px solid #ff3360;
+    color: #ff3360;
+}
+
+.fourth-container-text{
+    padding-top: 5em;
+}
+
+.cartao-credito{
+    position: absolute;
+    height: 500px;
+    width: auto;
+    left: 370px;
+}
+
+.fifith-step{
+    height: 110vh;
+    width: 100%;
+    background-color: white;
+    position: relative;
+}
+
+.fifith-container{
+    background-image: url('festa.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 10em;
+}
+
+#praVoce{
+    width: 80%;
+    height: auto;
+    font-family: cursive;
+    position: absolute;
+    bottom: 250px;
+    left: 200px;
+
+}
+#praVoce text{
+    font-family: Chalet Medium;
+    font-size: 363px;
+    font-weight: 200;
+}
+#text-fifith{
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 55px;
+    width: 1006px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+}
+
+.not-fixed{
+    margin-top: 190vh;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+#big-mundi{
+    position: absolute;
+    height: 200px;
+    left: 1153px;
+    top: 552px;
+}
+
+#little-mundi{
+    bottom: 30px;
+    height: 20px;
+    width: 320px;
+    margin-top: 0.5em;
+}
+
+#face-icon{
+    position: absolute;
+    right: -5px;
+    height: 33px;
+    top: 35vh;
+    opacity: 0;
+}
+
+#insta-icon{
+    position: absolute;
+    right: 6px;
+    height: 33px;
+    top: 55vh;
+    opacity: 0;
+}
+
+#in-icon{
+    position: absolute;
+    right: 5px;
+    height: 33px;
+    top: 45vh; 
+    opacity: 0;
+}
+
+.pinkButton{
+    background-color: #FF334F;
+    border-radius: 28px;
+    border: 1px solid #FF334F;
+    display: inline-block;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-size: 17px;
+    padding: 16px 31px;
+    text-decoration: none;
+    text-align: center;
+    width: 160px;
+    align-self: center;
+}
+
+#internacional-svg{
+    position: absolute;
+    bottom: 0px;
+    left: 700px;
+    width: auto;
+    height: 300px;
+}
+
+.footer{
+    height: unset;
+    width: 100%;
+    background-color: white;
+    position: relative;
+}
