@@ -200,8 +200,8 @@ window.onload = function() {
     //animação phones
     const tlPhones = new TimelineLite();
     tlPhones
-    .from('.phone-2', 0.6, {right: -380, top: 280, autoAlpha: 0})
-    .from('.phone-1', 0.6, {right: 415, top: -50, autoAlpha: 0})
+    .from('.phone-2', 1, {right: -380, top: 280, autoAlpha: 0})
+    .from('.phone-1', 0.8, {right: 415, top: -50, autoAlpha: 0})
 
     tlPhones.pause();
 
