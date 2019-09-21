@@ -27,15 +27,16 @@ window.onload = function() {
     $('.container-linguica').css("height", "unset");
   }
 
-    // Balanço cartões
-    $(".third-container").on('mousemove', function(e){
+    // Balanço phones
+    $(window).on('mousemove', function(e){
         centerX = $(this).width();
         centerY = $(this).height();
         
         moveX = (centerX - e.offsetX)/90;
         moveY = (centerY - e.offsetY)/90;
         
-        $(".app-phones").css("transform", 'rotateY('+ (moveX/2) + 'deg) rotateX('+ (moveY/2) + 'deg)')
+        $(".phone-1").css("transform", 'rotateY('+ (moveX/2) + 'deg) rotateX('+ (moveY/2) + 'deg)');
+        $(".phone-2").css("transform", 'rotateY('+ (moveX/2) + 'deg) rotateX('+ (moveY/2) + 'deg)');
     })
 
   timelineLoader.staggerFromTo(dot, 
@@ -142,14 +143,21 @@ window.onload = function() {
 
     //Animação colunas
     let tlColumns = new TimelineLite();
-    tlColumns.add('grow') 
-    .from('.column1', 0.3, {top: -120, autoAlpha: 0}, 'grow')
-    .from('.column2', 0.3, {top: -190, autoAlpha: 0}, 'grow')
-    .from('.column3', 0.3, {top: -250, autoAlpha: 0}, 'grow')
-    .from('.column4', 0.3, {top: -330, autoAlpha: 0}, 'grow')
-    .from('.column5', 0.3, {top: -250, autoAlpha: 0}, 'grow')
-    .from('.column6', 0.3, {top: -190, autoAlpha: 0}, 'grow')
-    .from('.column7', 0.3, {top: -120, autoAlpha: 0, onComplete: stopColumns}, 'grow')
+    tlColumns
+    .add('grow1') 
+    .from('.column1', 0.3, {top: -120, autoAlpha: 0}, 'grow1')
+    .from('.column7', 0.3, {top: -120, autoAlpha: 0}, 'grow1')
+    .add('grow2')
+    .from('.column2', 0.3, {top: -190, autoAlpha: 0}, 'grow2')
+    .from('.column6', 0.3, {top: -190, autoAlpha: 0}, 'grow2')
+    .add('grow3')
+    .from('.column3', 0.3, {top: -210, autoAlpha: 0}, 'grow3')
+    .from('.column5', 0.3, {top: -210, autoAlpha: 0}, 'grow3')
+    .add('grow4')
+    .from('.column4', 0.3, {top: -80, autoAlpha: 0, onComplete: stopColumns}, 'grow4')
+    
+    
+    
 
     //Cena columns
     const sceneColumns = new ScrollMagic.Scene({
@@ -192,7 +200,8 @@ window.onload = function() {
     //animação phones
     const tlPhones = new TimelineLite();
     tlPhones
-    .from('.app-phones', 0.6, {left: 40, autoAlpha: 0})
+    .from('.phone-2', 0.6, {right: -380, top: 280, autoAlpha: 0})
+    .from('.phone-1', 0.6, {right: 415, top: -50, autoAlpha: 0})
 
     tlPhones.pause();
 
@@ -233,7 +242,7 @@ window.onload = function() {
 
     //animação internacional
     const tlInter = new TimelineLite();
-    tlInter.
+    tlInter. 
         to('#internacional-svg', 1, {left: -620, onComplete: stopInter})
 
     //Cena Internacional

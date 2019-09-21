@@ -193,7 +193,7 @@ html, body{
 }
 
 .third-step{
-    height: 110vh;
+    height: 118vh;
     width: 100%;
 }
 
@@ -347,6 +347,20 @@ html, body{
     right: 115px;
     top: 115px;
 }
+
+.phone-1{
+    position: absolute;
+    height: 700px;
+    right: 215px;
+    top: 100px;
+}
+
+.phone-2{
+    position: absolute;
+    height: 700px;
+    right: 21px;
+    top: 180px;
+}   
 
 .fourth-step{
     height: 110vh;
@@ -537,7 +551,7 @@ html, body{
 #internacional-svg{
     position: absolute;
     bottom: 0px;
-    left: 700px;
+    left: 1100px;
     width: auto;
     height: 300px;
 }
@@ -557,19 +571,12 @@ html, body{
     position: relative;
     width: auto;
     height: 65px;
-    background: linear-gradient(225deg, #ebcdd6, #ff334f);
+    background: linear-gradient(225deg, #d13e6a, #ff334f);
     background-size: 400% 400%;
-    animation: animacaoGradient 4s ease infinite;
     fill: #FFFFFF;
     border-radius: 20%;
     top: 250px;
     left: 300px;
-}
-
-@keyframes animacaoGradient {
-    0%{background-position:0% 92%}
-    50%{background-position:100% 9%}
-    100%{background-position:0% 92%}
 }
 
 .container-footer{
