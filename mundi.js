@@ -270,7 +270,7 @@ window.onload = function() {
     })
     .setTween(tlColumns) 
     .addTo(controller);
-
+ 
     function stopColumns() {
         tlColumns.pause();
     }
