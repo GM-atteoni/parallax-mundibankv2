@@ -4,7 +4,7 @@ window.onload = function() {
   TweenMax.from(".border-top", 0.5, {height: 0, delay: 4.8});
   TweenMax.from("#little-mundi", 0.5, {autoAlpha: 0, delay: 5.2});
   TweenMax.from(".border-bottom", 0.5, {height: 0, delay: 4.8});
-  TweenMax.from(".border-left", 0.5, {width: 0, delay: 4.8});
+  TweenMax.from(".border-left", 0.5, {width: 0, delay: 4.8});  
   TweenMax.from(".border-right", 0.5, {width: 0, delay: 4.8});
   TweenMax.to("#svgOla", 1, {autoAlpha: 1, delay: 5.7, ease: Expo.easeIn});
   TweenMax.to("#face-icon", 0.4, {autoAlpha: 1, height: 25, delay: 6.2, ease: Expo.easeIn});
@@ -25,7 +25,129 @@ window.onload = function() {
 
   function colocaScroll(){
     $('.container-linguica').css("height", "unset");
+    playShakes();
   }
+
+  //Shake Face Icon
+
+    var element = $('#face-icon');
+
+    var tlShake1 = new TimelineMax();
+
+    TweenLite.defaultEase = Power0.easeNone;
+
+    var wiggleDuration = 0.1;
+    var wiggleAmount = 4;
+    var wiggleDistance = 2;
+    var pauseDuration = 3;
+
+        tlShake1
+        .set(element, {
+            x: 0
+        })
+        .to(element, (wiggleDuration / 2), {
+            x: (0 - wiggleDistance)
+        })
+        .fromTo(element, wiggleDuration, {
+            x: (0 - wiggleDistance),
+            immediateRender: false
+        }, {
+            x: wiggleDistance,
+            yoyo: true,
+            repeat: wiggleAmount
+        })
+        .to(element, (wiggleDuration / 2), {
+            x: 0
+        })
+        .repeatDelay(pauseDuration)
+        .repeat(-1);
+
+    tlShake1.pause();
+
+    //Shake linkedin Icon
+
+    var element = $('#in-icon');
+
+    var tlShake2 = new TimelineMax();
+
+    TweenLite.defaultEase = Power0.easeNone;
+
+    var wiggleDuration = 0.1;
+    var wiggleAmount = 2;
+    var wiggleDistance = 2;
+    var pauseDuration = 4;
+
+        tlShake2
+        .set(element, {
+            x: 0
+        })
+        .to(element, (wiggleDuration / 2), {
+            x: (0 - wiggleDistance)
+        })
+        .fromTo(element, wiggleDuration, {
+            x: (0 - wiggleDistance),
+            immediateRender: false
+        }, {
+            x: wiggleDistance,
+            yoyo: true,
+            repeat: wiggleAmount
+        })
+        .to(element, (wiggleDuration / 2), {
+            x: 0
+        })
+        .repeatDelay(pauseDuration)
+        .repeat(-1);
+
+    tlShake2.pause();
+
+    //Shake insta Icon
+
+    var element = $('#insta-icon');
+
+    var tlShake3 = new TimelineMax();
+
+    TweenLite.defaultEase = Power0.easeNone;
+
+    var wiggleDuration = 0.1;
+    var wiggleAmount = 3;
+    var wiggleDistance = 2;
+    var pauseDuration = 3;
+
+        tlShake3
+        .set(element, {
+            x: 0
+        })
+        .to(element, (wiggleDuration / 2), {
+            x: (0 - wiggleDistance)
+        })
+        .fromTo(element, wiggleDuration, {
+            x: (0 - wiggleDistance),
+            immediateRender: false
+        }, {
+            x: wiggleDistance,
+            yoyo: true,
+            repeat: wiggleAmount
+        })
+        .to(element, (wiggleDuration / 2), {
+            x: 0
+        })
+        .repeatDelay(pauseDuration)
+        .repeat(-1);
+
+    tlShake3.pause();
+
+
+    //Play shakes
+
+    function playShakes() {
+        tlShake1.play();
+        setTimeout(() => {
+            tlShake2.play();
+        }, 1000);
+        setTimeout(() => {
+            tlShake3.play();
+        }, 2000);
+    }
 
     // Balanço phones
     $(window).on('mousemove', function(e){
@@ -54,7 +176,6 @@ window.onload = function() {
   
     setTimeout(() => {
         $(window).bind('scroll',function(){
-            console.log($(window).scrollTop());
             //Se é o primeiro scroll
             if (!window.wasScrolled){ 
                //Manda o vermelho para a direita
@@ -82,11 +203,6 @@ window.onload = function() {
             //             to("#svgOla", 0.3, {right: "-13%", ease: Sine.easeIn}).
             //             to("#svgOla", 0.7, {right: "-10%", ease: Sine.easeOut})
             //     }
-
-            //Quando atinge o fundo
-            if($('.flex-cont').scrollTop() == ($(window).height() - $('.flex-cont').height())){
-                console.log('ok');
-            }
         })
     }, 4000);
 
@@ -125,40 +241,28 @@ window.onload = function() {
     let tBigMundi2 = new TimelineLite();
     tBigMundi2
     .to('#big-mundi', 3, {left: -1247})
-    .to('#big-mundi', 3, {top: 1252, onStart: playThirdText, onComplete:stopBigMundi2 });
+    .to('#big-mundi', 3, {left: -2400, onStart: playThirdText});
 
     //Cena big-mundi 2
     const sceneBigMundi2 = new ScrollMagic.Scene({
         triggerElement: '.third-container',
-        duration: 650,
+        duration: 1200,
         triggerHook: 0.9
     })
     .setTween(tBigMundi2)
     .addTo(controller);
 
-    function stopBigMundi2() {
-        tBigMundi2.pause();
-        tlBig1.pause();
-    }
-
     //Animação colunas
     let tlColumns = new TimelineLite();
     tlColumns
-    .add('grow1') 
     .from('.column1', 0.3, {top: -120, autoAlpha: 0}, 'grow1')
     .from('.column7', 0.3, {top: -120, autoAlpha: 0}, 'grow1')
-    .add('grow2')
     .from('.column2', 0.3, {top: -190, autoAlpha: 0}, 'grow2')
     .from('.column6', 0.3, {top: -190, autoAlpha: 0}, 'grow2')
-    .add('grow3')
     .from('.column3', 0.3, {top: -210, autoAlpha: 0}, 'grow3')
     .from('.column5', 0.3, {top: -210, autoAlpha: 0}, 'grow3')
-    .add('grow4')
-    .from('.column4', 0.3, {top: -80, autoAlpha: 0, onComplete: stopColumns}, 'grow4')
+    .from('.column4', 0.3, {top: -80, autoAlpha: 0}, 'grow4')
     
-    
-    
-
     //Cena columns
     const sceneColumns = new ScrollMagic.Scene({
         triggerElement: '.third-container',
@@ -171,6 +275,20 @@ window.onload = function() {
         tlColumns.pause();
     }
 
+    //animação terceiro SVG
+    let tlThirdSvg = new TimelineLite();
+    tlThirdSvg
+    .to('#BLANK', 6, {left: -1673});
+
+    //Cena third SVG 
+    const sceneThirdSvg = new ScrollMagic.Scene({
+        triggerElement: '.third-container',
+        duration: 2000,
+        triggerHook: 0.1
+    })
+    .setTween(tlThirdSvg)
+    .addTo(controller)
+
     //animação text do terceiro
     const tTextThird = new TimelineLite();
     tTextThird
@@ -182,7 +300,6 @@ window.onload = function() {
 
     function playThirdText() {
         tTextThird.play();
-        playPhones();
     }
 
     //animação segunda página
@@ -203,16 +320,18 @@ window.onload = function() {
     .from('.phone-2', 1, {right: -380, top: 280, autoAlpha: 0})
     .from('.phone-1', 0.8, {right: 415, top: -50, autoAlpha: 0})
 
-    tlPhones.pause();
-
-    function playPhones() {
-        tlPhones.play();
-    }
+    //Cena cartão
+    const scenePhones = new ScrollMagic.Scene({
+        triggerElement: '.third-container',
+        duration: 500,
+    })
+    .setTween(tlPhones)   
+    .addTo(controller);
 
     //animação cartão
     const tlCartao = new TimelineLite();
     tlCartao
-    .from('.cartao-credito', 1, {left: 40, autoAlpha: 0, ease: Back.easeOut.config(1.7), onStart: playFourth, onComplete: pauseCartao})
+    .from('.cartao-credito', 1, {left: 40, autoAlpha: 0, ease: Back.easeOut.config(1.7), onStart: playFourth})
 
     //Cena cartão
     const sceneCartao = new ScrollMagic.Scene({
@@ -242,30 +361,41 @@ window.onload = function() {
 
     //animação internacional
     const tlInter = new TimelineLite();
-    tlInter. 
-        to('#internacional-svg', 1, {left: -620, onComplete: stopInter})
+    tlInter.
+        to('#internacional-svg', 1, {left: -1880})
 
     //Cena Internacional
     const sceneInter = new ScrollMagic.Scene({
         triggerElement: '.fourth-container',
-        duration: 1200
+        duration: 2300
     })
     .setTween(tlInter)
     .addTo(controller)
 
-    function stopInter() {
-        tlInter.pause();
-        tlFifithText.play();
-    }
-
     //animação fourth-step > pra você
     const tlFifithText = new TimelineLite();
     tlFifithText
-        .from('#text-fifith', 0.8, {top: 100, autoAlpha: 0})
+        .from('#text-fifith', 0.4, {top: 60, autoAlpha: 0, onComplete: playPraVc})
+
+    //Cena fifith
+    const sceneFifith = new ScrollMagic.Scene({
+        triggerElement: '.fifith-container',
+        duration: 100,
+        triggerHook: 0.1
+    })
+    .setTween(tlFifithText)
+    .addTo(controller)
+
+    //Animação pra você
+    const tlPraVc = new TimelineLite();
+    tlPraVc
         .from('#praVoce', 1, {left: -400, autoAlpha: 0, onComplete: playFooter})
         
-    
-        tlFifithText.pause();
+    tlPraVc.pause();
+
+    function playPraVc() {
+        tlPraVc.play();
+    }
 
     //show footer
     const tlFooter = new TimelineLite();

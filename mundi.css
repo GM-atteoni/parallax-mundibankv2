@@ -25,7 +25,7 @@ html, body{
     position: fixed;
     top: 0;
     width: 100%;
-    height: 40px;
+    height: 50px;
     background-color: #fff;
 }
 
@@ -198,6 +198,7 @@ html, body{
 }
 
 .third-container{
+    position: relative;
     background-color: white;
     top: 0;
     bottom: 0;
@@ -433,9 +434,10 @@ html, body{
 
 .cartao-credito{
     position: absolute;
-    height: 500px;
+    height: 700px;
     width: auto;
-    left: 370px;
+    left: 570px;
+    top: -15vh;
 }
 
 .fifith-step{
@@ -498,21 +500,30 @@ html, body{
     position: absolute;
     height: 200px;
     left: 1153px;
-    top: 552px;
+    bottom: 0px;
+}
+
+#BLANK{
+    bottom: 0;
+    position: absolute;
+    width: auto;
+    height: 200px;
+    left: 1000px; 
 }
 
 #little-mundi{
     bottom: 30px;
-    height: 20px;
+    height: 25px;
     width: 320px;
-    margin-top: 0.5em;
+    margin-top: 0.8em;
+    margin-left: 2.5em;
 }
 
 #face-icon{
     position: absolute;
     right: -5px;
     height: 33px;
-    top: 35vh;
+    top: 38vh;
     opacity: 0;
 }
 
@@ -520,7 +531,7 @@ html, body{
     position: absolute;
     right: 6px;
     height: 33px;
-    top: 55vh;
+    top: 52vh;
     opacity: 0;
 }
 
