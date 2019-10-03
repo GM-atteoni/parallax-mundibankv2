@@ -149,7 +149,7 @@ window.onload = function() {
         }, 2000);
     }
 
-    // Balanço phones
+    // Balanço phones e cartão
     $(window).on('mousemove', function(e){
         centerX = $(this).width();
         centerY = $(this).height();
@@ -159,6 +159,7 @@ window.onload = function() {
         
         $(".phone-1").css("transform", 'rotateY('+ (moveX/2) + 'deg) rotateX('+ (moveY/2) + 'deg)');
         $(".phone-2").css("transform", 'rotateY('+ (moveX/2) + 'deg) rotateX('+ (moveY/2) + 'deg)');
+        $(".cartao-credito").css("transform", 'rotateY('+ (moveX/2) + 'deg) rotateX('+ (moveY/2) + 'deg)');
     })
 
   timelineLoader.staggerFromTo(dot, 
@@ -292,7 +293,7 @@ window.onload = function() {
     //animação text do terceiro
     const tTextThird = new TimelineLite();
     tTextThird
-    .from('.third-text-1', 0.8, {autoAlpha: 0, left: 50}, '+=0.2')
+    .from('.third-text-1', 0.8, {autoAlpha: 0, left: 50}, '-=0.5')
     .from('.third-text-2', 0.8, {autoAlpha: 0, right: 50}, '-=0.5')
     .from('.third-text-3', 0.4, {autoAlpha: 0}, '-=0.7');
 
@@ -314,16 +315,30 @@ window.onload = function() {
         tlSecond.play();
     }
 
+    //Animação segundo texto subindo
+    const tlSecondUp = new TimelineLite();
+        tlSecondUp
+    .to('.textLeftSection', 0.1, {top: -200})
+
+    //Cena second subindo
+    const sceneSecondUp = new ScrollMagic.Scene({
+        triggerElement: '.second-container',
+        duration: 200,
+        triggerHook: 0
+    })
+    .setTween(tlSecondUp)
+    .addTo(controller)
+
     //animação phones
     const tlPhones = new TimelineLite();
     tlPhones
-    .from('.phone-2', 1, {right: -380, top: 280, autoAlpha: 0})
-    .from('.phone-1', 0.8, {right: 415, top: -50, autoAlpha: 0})
+    .from('.phone-2', 1, {top: 300, autoAlpha: 0})
+    .from('.phone-1', 0.8, {top: 300, autoAlpha: 0}, '-=0.7')
 
     //Cena cartão
     const scenePhones = new ScrollMagic.Scene({
         triggerElement: '.third-container',
-        duration: 500,
+        duration: 400,
     })
     .setTween(tlPhones)   
     .addTo(controller);
@@ -367,7 +382,7 @@ window.onload = function() {
     //Cena Internacional
     const sceneInter = new ScrollMagic.Scene({
         triggerElement: '.fourth-container',
-        duration: 2300
+        duration: 1600
     })
     .setTween(tlInter)
     .addTo(controller)
