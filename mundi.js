@@ -25,7 +25,6 @@ window.onload = function() {
 
   function colocaScroll(){
     $('.container-linguica').css("height", "unset");
-    playShakes();
   }
 
   //Shake Face Icon
@@ -427,7 +426,7 @@ window.onload = function() {
         let $el = $('.footer');   
         let bottom = $el.position().top + $el.offset().top + $el.outerHeight(true);
 
-        TweenLite.to($(window), 0.8, {delay: 0.2, scrollTo: {y:bottom, autoKill:false}, ease: Power3.easeInOut});
+        TweenLite.to($(window), 0.8, {delay: 0.2, scrollTo: {y:bottom, autoKill:false}, ease: Power3.easeInOut, onComplete: playShakes});
     }
 
 };
