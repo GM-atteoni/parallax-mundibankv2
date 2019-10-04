@@ -7,9 +7,9 @@ window.onload = function() {
   TweenMax.from(".border-left", 0.5, {width: 0, delay: 4.8});  
   TweenMax.from(".border-right", 0.5, {width: 0, delay: 4.8});
   TweenMax.to("#svgOla", 1, {autoAlpha: 1, delay: 5.7, ease: Expo.easeIn});
-  TweenMax.to("#face-icon", 0.4, {autoAlpha: 1, height: 25, delay: 6.2, ease: Expo.easeIn});
-  TweenMax.to("#in-icon", 0.4, {autoAlpha: 1, height: 25, delay: 6.6, ease: Expo.easeIn});
-  TweenMax.to("#insta-icon", 0.4, {autoAlpha: 1, height: 25, delay: 7, ease: Expo.easeIn, onComplete: colocaScroll});
+  TweenMax.to("#face-icon", 0.4, {autoAlpha: 1, height: 20, delay: 6.2, ease: Expo.easeIn});
+  TweenMax.to("#in-icon", 0.4, {autoAlpha: 1, height: 20, delay: 6.6, ease: Expo.easeIn});
+  TweenMax.to("#insta-icon", 0.4, {autoAlpha: 1, height: 20, delay: 7, ease: Expo.easeIn, onComplete: colocaScroll});
   TweenMax.to(".home-scroll", 1, {autoAlpha: 1, top: '41em', delay: 6.0, ease: Expo.easeInOut});
   //   Vai para o topo, implementar depois
   // TweenLite.to('.container-linguica', 0.8, {scrollTo: {y:0, autoKill:false}, ease: Power3.easeInOut})
@@ -185,7 +185,7 @@ window.onload = function() {
                 tl.
                    to(".home-scroll", 0.2, {autoAlpha: 0, top: '43em', ease: Expo.easeIn}).
                    to("#svgOla", 0.4, {right: "-10%", ease: Sine.easeIn}).
-                   to("#text-home", 0.3, {y: -20, autoAlpha:1, ease: Sine.easeInOut});
+                   to("#text-home", 0.3, {x: 40, autoAlpha:1, ease: Sine.easeInOut});
                 window.wasScrolled = true;
             }
     
@@ -205,6 +205,13 @@ window.onload = function() {
             //     }
         })
     }, 4000);
+    
+    // function animaTextHome() {
+    //     setTimeout(() => {
+    //         TweenMax.to("#text-home", 0.4, {margin: 0, ease: Sine.easeInOut});
+    //         $("#text-home").css("text-align", "center");
+    //     }, 500);
+    // }
 
     //Animação Scroll
     const controller = new ScrollMagic.Controller();
@@ -224,30 +231,16 @@ window.onload = function() {
     .setTween(tlHome)
     .addTo(controller);
 
-    //animação big-mundi 1
-    let tlBig1 = new TimelineLite();
-    tlBig1
-    .to('#big-mundi', 1.5, {left: -290, onStart: playSecond})
-
-    //Cena big-mundi 1
-    const sceneBigMundi1 = new ScrollMagic.Scene({
-        triggerElement: '.second-step',
-        duration: 450
-    })
-    .setTween(tlBig1)
-    .addTo(controller);
-
     //animação big-mundi 2 -- do lugar certo até só sobrar bank
     let tBigMundi2 = new TimelineLite();
     tBigMundi2
-    .to('#big-mundi', 3, {left: -1247})
-    .to('#big-mundi', 3, {left: -2400, onStart: playThirdText});
+    .to('#big-mundi', 3, {left: -2400});
 
     //Cena big-mundi 2
     const sceneBigMundi2 = new ScrollMagic.Scene({
-        triggerElement: '.third-container',
-        duration: 1200,
-        triggerHook: 0.9
+        triggerElement: '.second-container',
+        duration: 1650,
+        triggerHook: 0.8
     })
     .setTween(tBigMundi2)
     .addTo(controller);
@@ -261,7 +254,7 @@ window.onload = function() {
     .from('.column6', 0.3, {top: -190, autoAlpha: 0}, 'grow2')
     .from('.column3', 0.3, {top: -210, autoAlpha: 0}, 'grow3')
     .from('.column5', 0.3, {top: -210, autoAlpha: 0}, 'grow3')
-    .from('.column4', 0.3, {top: -80, autoAlpha: 0}, 'grow4')
+    .from('.column4', 0.3, {top: -80, autoAlpha: 0, onComplete: playThirdText}, 'grow4')
     
     //Cena columns
     const sceneColumns = new ScrollMagic.Scene({
@@ -308,11 +301,15 @@ window.onload = function() {
     .from('.textLeftSection', 0.6, {left: 40, autoAlpha: 0}, '-=0.2')
     .from('.textLeftSection p', 0.8, {left: -90, autoAlpha: 0}, '-=0.2');
 
-    tlSecond.pause();
+    //Cena Segunda Página
+    const sceneSecondPage = new ScrollMagic.Scene({
+        triggerElement: '.second-container',
+        duration: 200,
+        triggerHook: 0.33
+    })
+    .setTween(tlSecond)
+    .addTo(controller)
 
-    function playSecond() {
-        tlSecond.play();
-    }
 
     //Animação segundo texto subindo
     const tlSecondUp = new TimelineLite();
@@ -331,8 +328,8 @@ window.onload = function() {
     //animação phones
     const tlPhones = new TimelineLite();
     tlPhones
-    .from('.phone-2', 1, {top: 300, autoAlpha: 0})
-    .from('.phone-1', 0.8, {top: 300, autoAlpha: 0}, '-=0.7')
+    .from('.phone-2', 1, {top: 500, autoAlpha: 0})
+    .from('.phone-1', 0.8, {top: 500, autoAlpha: 0}, '-=0.7')
 
     //Cena cartão
     const scenePhones = new ScrollMagic.Scene({
@@ -389,32 +386,21 @@ window.onload = function() {
     //animação fourth-step > pra você
     const tlFifithText = new TimelineLite();
     tlFifithText
-        .from('#text-fifith', 0.4, {top: 60, autoAlpha: 0, onComplete: playPraVc})
+        .from('#text-fifith', 0.6, {top: "30vh", autoAlpha: 0, onComplete: playFooter})
 
     //Cena fifith
     const sceneFifith = new ScrollMagic.Scene({
         triggerElement: '.fifith-container',
-        duration: 100,
+        duration: 130,
         triggerHook: 0.1
     })
     .setTween(tlFifithText)
     .addTo(controller)
 
-    //Animação pra você
-    const tlPraVc = new TimelineLite();
-    tlPraVc
-        .from('#praVoce', 1, {left: -400, autoAlpha: 0, onComplete: playFooter})
-        
-    tlPraVc.pause();
-
-    function playPraVc() {
-        tlPraVc.play();
-    }
-
     //show footer
     const tlFooter = new TimelineLite();
     tlFooter
-        .to('.footer', 0.5, {height: '60vh', ease: Sine.easeIn, onComplete: desceFooter})
+        .to('.footer', 0.1, {height: '60vh', ease: Sine.easeIn, onComplete: desceFooter, delay: 0.4})
 
         tlFooter.pause();
 
@@ -426,8 +412,9 @@ window.onload = function() {
         let $el = $('.footer');   
         let bottom = $el.position().top + $el.offset().top + $el.outerHeight(true);
 
-        TweenLite.to($(window), 0.8, {delay: 0.2, scrollTo: {y:bottom, autoKill:false}, ease: Power3.easeInOut, onComplete: playShakes});
+        TweenLite.to($(window), 1.6, {delay: 0.5, scrollTo: {y:bottom, autoKill:false}, onComplete: playShakes});
     }
 
 };
 
+ 

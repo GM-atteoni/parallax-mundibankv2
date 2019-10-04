@@ -141,7 +141,8 @@ html, body{
 
 .first-home-container p{
     position: relative;
-    margin-right: 35%;
+    text-align: center;
+    right: 6%;
     opacity: 0;
     font-family: 'Roboto';
     font-weight: 100;
@@ -163,7 +164,7 @@ html, body{
     position: absolute;
     right: -75px;
     height: 33px; 
-    top: 38em;
+    top: 85%;
 }
 
 .arrow-down{
@@ -219,16 +220,16 @@ html, body{
 .third-text{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 17em;
     margin-left: 5em;
     width: 16em;
-    margin-top: 10em;
+    margin-top: 15em;
 }
 
 .third-text-1{
     position: relative;
-    font-size: 45px;
+    font-size: 55px;
     font-family: 'Roboto';
     font-weight: 400;
 }
@@ -269,7 +270,7 @@ html, body{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 2em;
+    margin-top: 3em;
 }
 
 .column1{
@@ -297,7 +298,7 @@ html, body{
     width: 75px;
     transform: rotate(360deg);
     height: 230px;
-    margin-top: 65px;
+    margin-top: 90px;
     background: transparent linear-gradient(180deg, #B26591 0%, #FB3552 100%) 0% 0% no-repeat padding-box;
     opacity: 1;
 }
@@ -306,7 +307,7 @@ html, body{
     position: relative;
     width: 75px;
     transform: rotate(360deg);
-    height: 300px;
+    height: 360px;
     margin-top: 15px;
     background: transparent linear-gradient(180deg, #B26591 0%, #FB3552 100%) 0% 0% no-repeat padding-box;
     opacity: 1;
@@ -326,8 +327,8 @@ html, body{
     position: relative;
     width: 75px;
     transform: rotate(360deg);
-    height: 275px;
-    margin-top: 55px;
+    height: 240px;
+    margin-top: 125px;
     background: transparent linear-gradient(180deg, #B26591 0%, #FB3552 100%) 0% 0% no-repeat padding-box;
     opacity: 1;
 }
@@ -336,8 +337,8 @@ html, body{
     position: relative;
     width: 75px;
     transform: rotate(360deg);
-    height: 85px;
-    margin-top: 265px;
+    height: 130px;
+    margin-top: 80px;
     background: transparent linear-gradient(180deg, #B26591 0%, #FB3552 100%) 0% 0% no-repeat padding-box;
     opacity: 1;
 }
@@ -353,14 +354,14 @@ html, body{
     position: absolute;
     height: 700px;
     right: 215px;
-    top: 100px;
+    top: 130px;
 }
 
 .phone-2{
     position: absolute;
     height: 700px;
     right: 21px;
-    top: 180px;
+    top: 200px;
 }   
 
 .fourth-step{
@@ -386,8 +387,8 @@ html, body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    top: 90px;
-    height: 17em;
+    top: 25vh;
+    height: 7em;
     margin-left: 15em;
     width: 16em;
     text-align: center;
@@ -436,8 +437,8 @@ html, body{
     position: absolute;
     height: 700px;
     width: auto;
-    left: 570px;
-    top: -15vh;
+    left: 60vh;
+    top: -5vh;
 }
 
 .fifith-step{
@@ -461,25 +462,12 @@ html, body{
     padding-top: 10em;
 }
 
-#praVoce{
-    width: 80%;
-    height: auto;
-    font-family: cursive;
-    position: absolute;
-    bottom: 250px;
-    left: 200px;
-
-}
-#praVoce text{
-    font-family: Chalet Medium;
-    font-size: 363px;
-    font-weight: 200;
-}
 #text-fifith{
     font-family: 'Roboto';
-    font-weight: 600;
-    font-size: 55px;
-    width: 1006px;
+    font-weight: 500;
+    font-size: 50px;
+    width: 670px;
+    top: 15vh;
     text-align: center;
     position: relative;
     margin: auto;
@@ -507,15 +495,15 @@ html, body{
     bottom: 0;
     position: absolute;
     width: auto;
-    height: 200px;
-    left:300px; 
+    height: 300px;
+    left:400px; 
 }
 
 #little-mundi{
     bottom: 30px;
-    height: 25px;
+    height: 22px;
     width: 320px;
-    margin-top: 0.8em;
+    margin-top: 0.85em;
     margin-left: 2.5em;
 }
 
@@ -523,15 +511,15 @@ html, body{
     position: absolute;
     right: -5px;
     height: 33px;
-    top: 38vh;
+    top: 40vh;
     opacity: 0;
 }
 
 #insta-icon{
     position: absolute;
-    right: 6px;
+    right: 10px;
     height: 33px;
-    top: 52vh;
+    top: 50vh;
     opacity: 0;
 }
 
@@ -561,8 +549,8 @@ html, body{
 
 #internacional-svg{
     position: absolute;
-    bottom: 0px;
-    left: 1100px;
+    bottom: -4vh;
+    left: 900px;
     width: auto;
     height: 300px;
 }
@@ -617,15 +605,37 @@ html, body{
     width: 160px;
     align-self: center;
     transition: 0.2s ease-in-out all;
-    top: 70px;
-    left: 130px;
+    top: 10%;
 }
 
-.footer a:hover{
+.botoesFooter{
+    text-align: center;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-button-termos{
+    font-size: 11px !important;
+    width: unset !important;
+    background-color: #ffff !important;
+    color: #FF334F !important;
+    padding: 7px 16px !important;
+    top: 20% !important;
+}
+
+/* .footer-button-termos:hover{
+    background-color: #FF334F !important;
+    border: 1px solid #fff !important;
+    color: #fff !important;
+} */
+
+/* .footer a:hover{
     background-color: #fff;
     border: 1px solid #ff3360;
     color: #ff3360;
-}
+} */
 
 .footer-scroll{
     transform: scale(-1, -1) rotate(270deg);
