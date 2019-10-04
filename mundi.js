@@ -401,7 +401,7 @@ window.onload = function() {
     //show footer
     const tlFooter = new TimelineLite();
     tlFooter
-        .to('.footer', 0.1, {height: '60vh', ease: Sine.easeIn, onComplete: desceFooter})
+        .to('.footer', 0.1, {height: '45vh', ease: Sine.easeIn, onComplete: desceFooter})
 
         tlFooter.pause();
 
@@ -415,9 +415,21 @@ window.onload = function() {
         let $el = $('.footer');   
         let bottom = $el.position().top + $el.offset().top + $el.outerHeight(true);
 
-        TweenLite.to($(window), 1.6, {scrollTo: {y:bottom, autoKill:false}, onComplete: playShakes});
+        TweenLite.to($(window), 1.5, {scrollTo: {y:bottom, autoKill:false}, onComplete: playShakes});
     }
 
 };
-
  
+function clickPecaJa() {
+    //show footer
+    const tlFooter = new TimelineLite();
+    tlFooter
+        .to('.form', 0.1, {height: '100vh', onComplete: desceForm})
+}
+
+function desceForm() {
+        let $el = $('.form');   
+        let bottom = $el.position().top + $el.offset().top + $el.outerHeight(true);
+
+        TweenLite.to($(window), 0.01, {scrollTo: {y:bottom, ease: Sine.easeIn, autoKill:false}});
+}

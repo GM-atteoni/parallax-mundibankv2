@@ -499,7 +499,7 @@ html, body{
     bottom: 0;
     position: absolute;
     width: auto;
-    height: 200px;
+    height: 190px;
     left:350px; 
 }
 
@@ -572,7 +572,7 @@ html, body{
 
 .container-footer{
     position: relative;
-    top: 100px;
+    top: 8vh;
 }
 
 .text-footer{
@@ -642,4 +642,66 @@ html, body{
 
 .arrow-up{
     transform: rotate(270deg);
+}
+
+.form{
+    height: 0vh;
+    width: 100%;
+    background-color: white;
+    position: relative;
+}
+
+.form-button{
+    position: relative;
+    background-color:#FF334F;
+	border-radius:28px;
+	border:1px solid #FF334F;
+	display:inline-block;
+	cursor:pointer;
+	color:#FFFFFF;
+	font-family: 'Roboto';
+	font-size: 20px;
+    font-weight: 500;
+	padding:12px 31px;
+    text-decoration:none;
+    text-align: center;
+    width: 160px;
+    align-self: center;
+    transition: 0.2s ease-in-out all;
+}
+
+.form-text{
+    position: relative;
+    font-size: 50px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    text-align: center;
+    width: 950px;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 15vh;
+    height: 100%;
+    align-items: center;
+    position: relative;
+}
+
+.form-footer span{
+    margin-right: 10vh;
+}
+
+.form .form-1{
+    height: 20vh;
+}
+
+.form .form-2{
+    height: 20vh;
+}
+
+.form-footer{
+    position: absolute;
+    bottom: 20vh;
 }
