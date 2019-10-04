@@ -417,12 +417,12 @@ window.onload = function() {
     //animação footer
     const tlFooterFooter = new TimelineLite();
         tlFooterFooter
-    .to('.form-footer', 0.2, {autoAlpha: 1});
+    .to('.form-footer', 0.1, {autoAlpha: 1});
 
     //Cena footer
     const sceneFooter = new ScrollMagic.Scene({
         triggerElement: '.form',
-        duration: 130,
+        duration: 70,
         triggerHook: 0.1 
     })
     .setTween(tlFooterFooter)
