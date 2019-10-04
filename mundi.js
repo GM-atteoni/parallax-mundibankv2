@@ -418,6 +418,34 @@ window.onload = function() {
         TweenLite.to($(window), 1.5, {scrollTo: {y:bottom, autoKill:false}, onComplete: playShakes});
     }
 
+    //animação footer
+    const tlFooterFooter = new TimelineLite();
+        tlFooterFooter
+    .to('.form-footer', 0.2, {autoAlpha: 1});
+
+    //Cena footer
+    const sceneFooter = new ScrollMagic.Scene({
+        triggerElement: '.form',
+        duration: 130,
+        triggerHook: 0.1 
+    })
+    .setTween(tlFooterFooter)
+    .addTo(controller)
+
+    $("#tel")
+        .mask("(99) 9999-9999?9")
+        .focusout(function (event) {  
+            var target, phone, element;  
+            target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
+            phone = target.value.replace(/\D/g, '');
+            element = $(target);  
+            element.unmask();  
+            if(phone.length > 10) {  
+                element.mask("(99) 99999-999?9");  
+            } else {  
+                element.mask("(99) 9999-9999?9");  
+            }  
+        });
 };
  
 function clickPecaJa() {
@@ -433,3 +461,4 @@ function desceForm() {
 
         TweenLite.to($(window), 0.01, {scrollTo: {y:bottom, ease: Sine.easeIn, autoKill:false}});
 }
+

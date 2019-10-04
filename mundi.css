@@ -707,6 +707,7 @@ html, body{
     position: absolute;
     bottom: 20vh;
     font-family: Roboto;
+    opacity: 0;
 }
 .form-contato{
 	font-size: 21px;
@@ -745,4 +746,21 @@ html, body{
 }
 .btn-form{
 	width: 50%;
+}
+
+*:focus {
+    outline: none;
+}
+
+.termosecondic{
+  background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, #ddd 50%);
+  background-position: -0% 0;
+  background-size: 200% auto;
+  text-decoration: none;
+  transition: background-position 0.5s ease-out;
+}
+
+.termosecondic:hover{
+    background-position: -99.99% 0;
+    cursor: pointer;
 }
