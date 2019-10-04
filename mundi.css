@@ -12,6 +12,10 @@
     user-select: none;
 }
 
+*:focus {
+    outline: none;
+}
+
 html, body{
     width: 100%;
     height: 100%;
@@ -270,7 +274,7 @@ html, body{
 }
 
 .columns{
-    flex-basis: 45%;
+    width: 700px;   
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -748,9 +752,6 @@ html, body{
 	width: 50%;
 }
 
-*:focus {
-    outline: none;
-}
 
 .termosecondic{
   background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, #ddd 50%);

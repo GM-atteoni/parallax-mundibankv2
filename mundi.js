@@ -249,13 +249,13 @@ window.onload = function() {
     //Animação colunas
     let tlColumns = new TimelineLite();
     tlColumns
-    .from('.column1', 0.3, {top: -120, autoAlpha: 0}, 'grow1')
-    .from('.column7', 0.3, {top: -120, autoAlpha: 0}, 'grow1')
-    .from('.column2', 0.3, {top: -190, autoAlpha: 0}, 'grow2')
-    .from('.column6', 0.3, {top: -190, autoAlpha: 0}, 'grow2')
-    .from('.column3', 0.3, {top: -210, autoAlpha: 0}, 'grow3')
-    .from('.column5', 0.3, {top: -210, autoAlpha: 0}, 'grow3')
-    .from('.column4', 0.3, {top: -80, autoAlpha: 0, onComplete: playThirdText}, 'grow4')
+    .from('.column1', 0.6, {top: -120, autoAlpha: 0, ease: Back.easeOut.config(1.7)}, 'grow1')
+    .from('.column7', 0.6, {top: -120, autoAlpha: 0, ease: Back.easeOut.config(1.7)}, 'grow1')
+    .from('.column2', 0.6, {top: -190, autoAlpha: 0, ease: Back.easeOut.config(1.7)}, 'grow2')
+    .from('.column6', 0.6, {top: -190, autoAlpha: 0, ease: Back.easeOut.config(1.7)}, 'grow2')
+    .from('.column3', 0.6, {top: -210, autoAlpha: 0, ease: Back.easeOut.config(1.7)}, 'grow3')
+    .from('.column5', 0.6, {top: -210, autoAlpha: 0, ease: Back.easeOut.config(1.7)}, 'grow3')
+    .from('.column4', 0.6, {top: -80, autoAlpha: 0, ease: Back.easeOut.config(1.7) , onComplete: playThirdText}, 'grow4')
     
     //Cena columns
     const sceneColumns = new ScrollMagic.Scene({
@@ -264,10 +264,6 @@ window.onload = function() {
     })
     .setTween(tlColumns) 
     .addTo(controller);
- 
-    function stopColumns() {
-        tlColumns.pause();
-    }
 
     //animação terceiro SVG
     let tlThirdSvg = new TimelineLite();
@@ -329,13 +325,13 @@ window.onload = function() {
     //animação phones
     const tlPhones = new TimelineLite();
     tlPhones
-    .from('.phone-2', 1, {top: 500, autoAlpha: 0})
-    .from('.phone-1', 0.8, {top: 500, autoAlpha: 0}, '-=0.7')
+    .from('.phone-2', 1, {top: 500, autoAlpha: 0, ease: Sine.easeIn})
+    .from('.phone-1', 0.8, {top: 500, autoAlpha: 0, ease: Sine.easeIn}, '-=0.7')
 
     //Cena cartão
     const scenePhones = new ScrollMagic.Scene({
         triggerElement: '.third-container',
-        duration: 400,
+        duration: 300,
     })
     .setTween(tlPhones)   
     .addTo(controller);
