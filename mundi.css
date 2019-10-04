@@ -4,6 +4,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 html, body{
@@ -93,14 +99,11 @@ html, body{
     z-index: 3;
 }
 
-#loader .dot{
-    width: 12px;
-    height: 12px;
-    display: inline-block;
-    border-radius: 100%;
-    margin-right: 6px;
-    border: 1px white solid;
-    opacity: 0;
+.svg-logo{
+    opacity: 1;
+    height: 60px;
+    width: auto;
+    fill: #FFFFFF;
 }
 
 .textLeftSection{
@@ -164,6 +167,7 @@ html, body{
     position: absolute;
     right: -75px;
     height: 33px; 
+    font-family: 'Roboto';
     top: 85%;
 }
 
@@ -388,10 +392,10 @@ html, body{
     flex-direction: column;
     justify-content: space-evenly;
     top: 25vh;
-    height: 7em;
+    height: 8em;
     margin-left: 15em;
-    width: 16em;
-    text-align: center;
+    width: 17em;
+    text-align: left;
 }
 
 .fourth-text h2{
@@ -495,15 +499,15 @@ html, body{
     bottom: 0;
     position: absolute;
     width: auto;
-    height: 300px;
-    left:400px; 
+    height: 200px;
+    left:350px; 
 }
 
 #little-mundi{
     bottom: 30px;
-    height: 22px;
+    height: 18px;
     width: 320px;
-    margin-top: 0.85em;
+    margin-top: 1em;
     margin-left: 2.5em;
 }
 
@@ -549,10 +553,10 @@ html, body{
 
 #internacional-svg{
     position: absolute;
-    bottom: -4vh;
-    left: 900px;
+    bottom: 0;
+    left: 950px;
     width: auto;
-    height: 300px;
+    height: 250px;
 }
 
 .footer{
@@ -564,18 +568,6 @@ html, body{
     flex-direction: row;
     justify-content: center;
     align-content: center;
-}
-
-#icon-chat{
-    position: relative;
-    width: auto;
-    height: 65px;
-    background: linear-gradient(225deg, #d13e6a, #ff334f);
-    background-size: 400% 400%;
-    fill: #FFFFFF;
-    border-radius: 20%;
-    top: 250px;
-    left: 300px;
 }
 
 .container-footer{
@@ -598,8 +590,9 @@ html, body{
 	cursor:pointer;
 	color:#FFFFFF;
 	font-family: 'Roboto';
-	font-size:13px;
-	padding:16px 31px;
+	font-size: 20px;
+    font-weight: 500;
+	padding:12px 31px;
     text-decoration:none;
     text-align: center;
     width: 160px;
@@ -616,14 +609,14 @@ html, body{
     flex-direction: column;
 }
 
-.footer-button-termos{
+/* .footer-button-termos{
     font-size: 11px !important;
     width: unset !important;
     background-color: #ffff !important;
     color: #FF334F !important;
     padding: 7px 16px !important;
     top: 20% !important;
-}
+} */
 
 /* .footer-button-termos:hover{
     background-color: #FF334F !important;

@@ -17,7 +17,11 @@ window.onload = function() {
   //Loader 
   dot = $('.dot'); 
   loader = $('#loader');
-  timelineLoader = new TimelineMax({repeat: 3});
+  timelineLoader = new TimelineMax({repeat: 4, onComplete: hideLogo});
+
+  function hideLogo() {
+      TweenMax.to(loader, 0.4, {autoAlpha: 0, scale: 0.5});
+  }
 
   function tiraScroll(){
     $('.container-linguica').css("height", "100vh");
@@ -149,28 +153,25 @@ window.onload = function() {
     }
 
     // Balanço phones e cartão
-    $(window).on('mousemove', function(e){
-        centerX = $(this).width();
-        centerY = $(this).height();
+    // $(window).on('mousemove', function(e){
+    //     centerX = $(this).width();
+    //     centerY = $(this).height();
         
-        moveX = (centerX - e.offsetX)/90;
-        moveY = (centerY - e.offsetY)/90;
-        
-        $(".phone-1").css("transform", 'rotateY('+ (moveX/2) + 'deg) rotateX('+ (moveY/2) + 'deg)');
-        $(".phone-2").css("transform", 'rotateY('+ (moveX/2) + 'deg) rotateX('+ (moveY/2) + 'deg)');
-        $(".cartao-credito").css("transform", 'rotateY('+ (moveX/2) + 'deg) rotateX('+ (moveY/2) + 'deg)');
-    })
+    //     moveX = (centerX - e.offsetX)/90;
+    //     moveY = (centerY - e.offsetY)/90;
 
-  timelineLoader.staggerFromTo(dot, 
-                               0.3, 
-                               {y: 0, autoAlpha: 0}, 
-                               {y: 20, autoAlpha: 1, ease: Back.EaseInOut}, 
-                               0.2)
-                .fromTo(loader, 
-                        0.3,
-                        {autoAlpha: 1, scale: 1.3},
-                        {autoAlpha: 0, scale: 1, ease: Power0.easeNone},
-                        0.9);
+    //     console.log(moveX);
+    //     console.log(moveY);
+        
+    //     $(".phone-1").css("transform", 'rotateY('+ (moveX/2) + 'deg) rotateX('+ (moveY/2) + 'deg)');
+    //     $(".phone-2").css("transform", 'rotateY('+ (moveX/2) + 'deg) rotateX('+ (moveY/2) + 'deg)');
+    //     $(".cartao-credito").css("transform", 'rotateY('+ (moveX/2) + 'deg) rotateX('+ (moveY/2) + 'deg)');
+    // })
+
+  timelineLoader.fromTo(loader, 
+                        1,
+                        {rotation: 0},
+                        {rotation: 360, ease: Power0.easeNone});
 
   window.wasScrolled = false;
   
@@ -392,7 +393,7 @@ window.onload = function() {
     const sceneFifith = new ScrollMagic.Scene({
         triggerElement: '.fifith-container',
         duration: 130,
-        triggerHook: 0.1
+        triggerHook: 0.1 
     })
     .setTween(tlFifithText)
     .addTo(controller)
@@ -400,19 +401,21 @@ window.onload = function() {
     //show footer
     const tlFooter = new TimelineLite();
     tlFooter
-        .to('.footer', 0.1, {height: '60vh', ease: Sine.easeIn, onComplete: desceFooter, delay: 0.4})
+        .to('.footer', 0.1, {height: '60vh', ease: Sine.easeIn, onComplete: desceFooter})
 
         tlFooter.pause();
 
     function playFooter() {
-        tlFooter.play();
+        setTimeout(() => {
+            tlFooter.play();    
+        }, 400);
     }
 
     function desceFooter() {  
         let $el = $('.footer');   
         let bottom = $el.position().top + $el.offset().top + $el.outerHeight(true);
 
-        TweenLite.to($(window), 1.6, {delay: 0.5, scrollTo: {y:bottom, autoKill:false}, onComplete: playShakes});
+        TweenLite.to($(window), 1.6, {scrollTo: {y:bottom, autoKill:false}, onComplete: playShakes});
     }
 
 };
