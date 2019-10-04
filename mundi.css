@@ -672,11 +672,12 @@ html, body{
 
 .form-text{
     position: relative;
-    font-size: 50px;
+    font-size: 40px;
     font-family: 'Roboto';
     font-weight: 400;
     text-align: center;
-    width: 950px;
+    width: 57%;
+    margin: 0 auto;
 }
 
 .form-container{
@@ -691,17 +692,57 @@ html, body{
 
 .form-footer span{
     margin-right: 10vh;
+    font-family: Roboto;
 }
 
-.form .form-1{
+/*.form .form-1{
     height: 20vh;
 }
 
 .form .form-2{
     height: 20vh;
-}
+}*/
 
 .form-footer{
     position: absolute;
     bottom: 20vh;
+    font-family: Roboto;
+}
+.form-contato{
+	font-size: 21px;
+	font-family: Roboto;
+}
+.form-contato input{
+	color: #999;
+	border: 1px solid #999;
+	border-radius: 30px;
+	padding: 15px 20px;
+	margin-top: 10px;
+	width: 100%;
+	font-size: 18px;
+}
+.form-contato label{
+	display: block;
+	margin-left: 10px;
+	font-weight: 500;
+}
+.form-contato{
+	width: 50%;
+	margin: 75px auto;
+    margin-bottom: 30px;
+	display: flex;
+    flex-direction: column;
+}
+.form-1{
+	display: flex;
+    justify-content: space-between;
+}
+.form-1 .nome,.form-1 .telephone{
+	width: 48%;
+}
+.form .form-2{
+   margin-top: 35px;
+}
+.btn-form{
+	width: 50%;
 }
