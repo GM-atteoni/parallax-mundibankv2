@@ -785,9 +785,8 @@ html, body{
         width: 100%;
     }
     .mobile-cont{
-        height: 600vh;
+        height: 700vh;
         width: 100%;
-        background-color: #B26591;
         display: flex;
         flex-direction: column;
         overflow-x: hidden;
@@ -808,16 +807,35 @@ html, body{
     .third-screen{
         height: 100%;
         width: 100%;
-        background-color: orange;
     }
 
     .fourth-screen{
         height: 100%;
         width: 100%;
-        background-color: green;
+        position: relative;
     }
 
     .fifith-screen{
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+
+    .fifith-container {
+        background-image: url(festa.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 60%;
+        padding-top: unset;
+    }
+
+    .sixth-screen{
         height: 100%;
         width: 100%;
         background-color: blue;
@@ -827,13 +845,13 @@ html, body{
         position: relative;
     }
     #svgOla{
-        right: -211px;
+        right: -100%;
         opacity: 1;
     }
     .abra-conta-mobile{
         text-align: center;
         font-family: Roboto;
-        font-size: 60px;
+        font-size: 36px;
         position: relative;
         color: #fff;
         padding: 60px;
@@ -841,37 +859,42 @@ html, body{
         max-width: 650px;
     }
     .second-container{
-        background-attachment: unset;
+        background-attachment: fixed;
         position: relative;
+        background-size: cover;
+        background-position-x: 60%;
     }
     #big-mundi {
         position: absolute;
-        height: 140px;
-        left: -579px;
+        height: 86px;
+        left: 0px;
         bottom: 0;
     }
     #text-fifith {
         font-family: 'Roboto';
         font-weight: 600;
-        font-size: 55px;
+        font-size: 40px;
         width: auto;
         top: 0;
         text-align: center;
         position: relative;
         margin: auto;
         padding: 35px;
-        max-width: 510px;
     }
-    .last-screen {
+    .comemore {
         height: 40%;
         background: #fff;
         display: flex;
-        align-items: center; 
+        align-items: center;
         justify-content: center;
+        flex-direction: column;
     }
     .text-footer {
         font-weight: 900;
+        text-align: center;
         margin-bottom: 40px;
+        padding-top: 0vh;
+        font-size: 40px;
     }
     .footer-button{
         position: relative;
@@ -908,7 +931,11 @@ html, body{
         margin-bottom: 30px;
     }
     .form-contato{
-        width: 85%
+        margin: 30px auto;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        width: 85%;
     }
     .form-text {
         font-size: 36px;
@@ -916,4 +943,46 @@ html, body{
         max-width: 350px;
         margin: 0 auto;
     }
+
+    .img-barras{
+        padding-top: 5%;
+    }
+
+    .phones-mob{
+        position: absolute;
+        top: 10%;
+        height: 75%;
+        left: 5%;
+    }
+
+    .text-phones {
+        position: absolute;
+        bottom: 10%;
+        left: 2%;
+    }
+
+    .text-phones-2{
+        position: absolute;
+        bottom: 0%;
+        left: 2%;   
+    }
+
+    .facatudo-cartao-mobile{
+        position: absolute;
+        bottom: 25%;
+        left: 2%;
+    }
+
+    .textcartao-mobile{
+        position: absolute;
+        bottom: 15%;
+        left: 2%;
+    }
+
+    .internacional-mobile{
+        height: 100px;
+        position: absolute;
+        bottom: 0;
+    }
+
   }
