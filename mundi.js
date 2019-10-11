@@ -466,3 +466,13 @@ function desceForm() {
         TweenLite.to($(window), 0.01, {scrollTo: {y:bottom, ease: Sine.easeIn, autoKill:false}});
 }
 
+function clickPecaJaMobile() {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#form-mobile").offset().top
+    }, 500);
+}
+
+function enviarMobile() {
+    
+}
+

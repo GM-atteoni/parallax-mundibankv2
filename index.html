@@ -182,7 +182,7 @@
                     </div>
                     <div class="comemore">
                         <h3 class="text-footer">Comemore a vida!</h3>
-                        <a class="footer-button" onclick="clickPecaJa();">PEÇA JÁ</a>
+                        <a class="footer-button" onclick="clickPecaJaMobile();">PEÇA JÁ</a>
                     </div>
                 </div>
                 <div class="form-screen">
@@ -191,7 +191,7 @@
                             Preencha abaixo para pedir seu Mundibank e seu cartão de Internacional
                         </h2>
                     </div>
-                    <form class="form-contato">
+                    <form id="form-mobile" class="form-contato">
                         <div class="nome">
                             <label>Nome</label>
                             <input tabindex="-1" type="text" name="nome" placeholder="Primeiro Nome">
@@ -204,6 +204,7 @@
                             <label>Email</label>
                             <input tabindex="-1" type="email" name="email" placeholder="Digite seu e-mail">
                         </div>
+                        <a class="footer-button" onclick="enviarMobile();">ENVIAR</a>
                     </form>
                 </div>
             </div>
