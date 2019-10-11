@@ -924,6 +924,7 @@ html, body{
     .form-screen{
         height: 100%;
         background: #fff;
+        padding-top: 40%;
     }
     .form-contato input {
 
@@ -952,7 +953,7 @@ html, body{
         position: absolute;
         top: 10%;
         height: 75%;
-        left: 5%;
+        right: 0;
     }
 
     .text-phones {
