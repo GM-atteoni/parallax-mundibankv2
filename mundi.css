@@ -933,7 +933,7 @@ html, body{
         margin: 30px auto;
         margin-bottom: 30px;
         display: flex;
-        flex-direction: column;
+        flex-direction: column;c
         width: 85%;
     }
     .form-text {
@@ -946,6 +946,7 @@ html, body{
 
     .img-barras{
         padding-top: 5%;
+        height: 60%;
     }
 
     .phones-mob{
@@ -959,28 +960,32 @@ html, body{
         position: absolute;
         bottom: 10%;
         left: 2%;
+        height: 20%;
     }
 
     .text-phones-2{
         position: absolute;
         bottom: 0%;
-        left: 2%;   
+        left: 2%;  
+        height: 8%; 
     }
 
     .facatudo-cartao-mobile{
         position: absolute;
-        bottom: 25%;
+        bottom: 30%;
         left: 2%;
+        height: 20%
     }
 
     .textcartao-mobile{
         position: absolute;
-        bottom: 15%;
+        bottom: 20%;
         left: 2%;
+        height: 8%;
     }
 
     .internacional-mobile{
-        height: 18%;
+        height: 22%;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -989,6 +994,7 @@ html, body{
     .cartao-mobile{
         position: absolute;
         right: 0;
+        height: 65%;
     }
 
   }
