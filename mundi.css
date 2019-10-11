@@ -980,13 +980,13 @@ html, body{
     }
 
     .internacional-mobile{
-        height: 100px;
+        height: 18%;
         position: absolute;
         bottom: 0;
         left: 0;
     }
 
-    .cartao-moile{
+    .cartao-mobile{
         position: absolute;
         right: 0;
     }
