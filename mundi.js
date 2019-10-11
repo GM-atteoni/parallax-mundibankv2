@@ -1,5 +1,13 @@
-window.onload = function() { 
-  tiraScroll();  
+window.onload = function() {
+    if(window.matchMedia("(max-width: 1110px)").matches){
+        //mobile
+    }else{
+        this.process();
+    }
+};
+ 
+function process() {
+    tiraScroll();  
   TweenMax.to("#firstTransitionDiv", 0.5, {xPercent:-50, delay: 5.7});
   TweenMax.from(".border-top", 0.5, {height: 0, delay: 4.8});
   TweenMax.from("#little-mundi", 0.5, {autoAlpha: 0, delay: 5.2});
@@ -442,7 +450,7 @@ window.onload = function() {
                 element.mask("(99) 9999-9999?9");  
             }  
         });
-};
+}
  
 function clickPecaJa() {
     //show footer
