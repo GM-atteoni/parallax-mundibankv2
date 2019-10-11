@@ -844,8 +844,13 @@ html, body{
         position: relative;
     }
     #svgOla{
-        right: -100%;
         opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
     }
     .abra-conta-mobile{
         text-align: center;
@@ -947,6 +952,7 @@ html, body{
     .img-barras{
         padding-top: 5%;
         height: 60%;
+        width: 100%;
     }
 
     .phones-mob{
@@ -960,7 +966,7 @@ html, body{
         position: absolute;
         bottom: 10%;
         left: 2%;
-        height: 17%;
+        height: 15%;
     }
 
     .text-phones-2{
@@ -974,7 +980,7 @@ html, body{
         position: absolute;
         bottom: 30%;
         left: 2%;
-        height: 17%
+        height: 15%
     }
 
     .textcartao-mobile{
