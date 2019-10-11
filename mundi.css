@@ -785,11 +785,12 @@ html, body{
         width: 100%;
     }
     .mobile-cont{
-        height: 500vh;
+        height: 600vh;
         width: 100%;
         background-color: #B26591;
         display: flex;
         flex-direction: column;
+        overflow-x: hidden;
     }
     .first-screen{
         height: 100%;
@@ -860,5 +861,59 @@ html, body{
         margin: auto;
         padding: 35px;
         max-width: 510px;
+    }
+    .last-screen {
+        height: 40%;
+        background: #fff;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+    }
+    .text-footer {
+        font-weight: 900;
+        margin-bottom: 40px;
+    }
+    .footer-button{
+        position: relative;
+        background-color: #FF334F;
+        border-radius: 28px;
+        border: 1px solid #FF334F;
+        display: inline-block;
+        cursor: pointer;
+        color: #FFFFFF;
+        font-family: 'Roboto';
+        font-size: 20px;
+        font-weight: 500;
+        padding: 12px 31px;
+        text-decoration: none;
+        text-align: center;
+        width: 160px;
+        align-self: center;
+        transition: 0.2s ease-in-out all;
+        top: 10%;
+    }
+    .last-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .form-screen{
+        height: 100%;
+        background: #fff;
+    }
+    .form-contato input {
+
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .form-contato{
+        width: 85%
+    }
+    .form-text {
+        font-size: 36px;
+        width: 85%;
+        max-width: 350px;
+        margin: 0 auto;
     }
   }
