@@ -794,12 +794,15 @@ html, body{
     .first-screen{
         height: 100%;
         width: 100%;
-        background-color: yellow;
+        background-color: #fff;
     }
     .second-screen{
         height: 100%;
         width: 100%;
-        background-color: red;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .third-screen{
         height: 100%;
@@ -818,5 +821,44 @@ html, body{
         width: 100%;
         background-color: blue;
     }
-
+    .first-home-container{
+        width: 50%;
+        position: relative;
+    }
+    #svgOla{
+        right: -211px;
+        opacity: 1;
+    }
+    .abra-conta-mobile{
+        text-align: center;
+        font-family: Roboto;
+        font-size: 60px;
+        position: relative;
+        color: #fff;
+        padding: 60px;
+        font-weight: 400;
+        max-width: 650px;
+    }
+    .second-container{
+        background-attachment: unset;
+        position: relative;
+    }
+    #big-mundi {
+        position: absolute;
+        height: 140px;
+        left: -579px;
+        bottom: 0;
+    }
+    #text-fifith {
+        font-family: 'Roboto';
+        font-weight: 600;
+        font-size: 55px;
+        width: auto;
+        top: 0;
+        text-align: center;
+        position: relative;
+        margin: auto;
+        padding: 35px;
+        max-width: 510px;
+    }
   }
