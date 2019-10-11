@@ -983,6 +983,12 @@ html, body{
         height: 100px;
         position: absolute;
         bottom: 0;
+        left: 0;
+    }
+
+    .cartao-moile{
+        position: absolute;
+        right: 0;
     }
 
   }
