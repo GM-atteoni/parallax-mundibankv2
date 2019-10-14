@@ -942,11 +942,15 @@ html, body{
         width: 85%;
     }
     .form-text {
-        font-size: 36px;
-        width: 85%;
-        max-width: 350px;
-        margin: 0 auto;
-        padding-top: 20%;
+        font-size: 30px;
+        width: 100%;
+        max-width: none;
+        margin: unset;
+        padding-top: 25%;
+    }
+    
+    .form-mobile{
+        font-size: 15px;
     }
 
     .img-barras{
